@@ -1,0 +1,68 @@
+/* contoh selector tag di Eksternal */
+p{
+    color: darkblue;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12pt;
+}
+
+body{
+    /* background-color: aquamarine;  */
+    background-image:url('../img/backg.jpg');
+    background-repeat: no-repeat ;
+    background-size: cover;
+}
+fieldset, legend{
+    border-width: 1px;
+    border-color: rgb(164, 164, 164);
+    border-radius: 30px;
+}
+legend{
+    padding: 10px;
+    background-color: rgb(26, 83, 82);
+    color: rgb(16, 27, 37);
+    font-weight: bold;
+    font-size: 14pt;
+}
+ol{
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+table{
+    border: 10px;
+    margin: auto;
+}
+tr{
+    padding: 5px;
+    border: 1px solid green;
+}
+tr:hover{
+    background-color: blue;
+    color: red;
+    font-size: 15pt;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+}
+/* contoh selector id dapat masuk ke semua tag */
+#paragraph{
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    color: aqua;
+}
+/* id yang dikhususkan untuk tag li/ tag yang lain */
+/* li#paragraph{
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    color: aqua;
+} */
+/* ul, li, a.item:link, a.item:visited, a.item:active{
+    text-decoration: none; 
+    list-style: none;
+    display: block;
+    float: left;
+    padding: 2px 3px;
+    background-color: rgb(255, 255, 255);
+} */

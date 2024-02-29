@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table border="1" align="center" cellpadding="15" width="50%">
+            <thead>
+                <tr bgcolor="lightblue">
+                    <th colspan="2">Latihan Form</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th colspan="2">
+                        <input type="submit" value="kirim"> &nbsp; &nbsp;
+                        <input type="reset" value="batal">
+                    </th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td width="100">
+                        <label for="">Masukkan Nama</label>
+                    </td>
+                    <td>
+                        <input type="text" name="" 
+                        id="" placeholder="isi form ini" size="50">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Masukkan Email :</label>
+                    </td>
+                    <td>
+                        <input type="email" name="" size="50"
+                        id="" placeholder="Masukkan alamat email">
+                        <!-- <input type="hidden"> -->
+                        <!-- type hidden mengirim form yang sifatnya rahasia misalnya id -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Gender</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="Gender" value="L"> Laki-Laki &nbsp; 
+                        <input type="radio" name="Gender" value="P" > Perempuan
+                    </td>
+                <tr>
+                </tr>
+                    <td>Hobby</td>
+                        <td>
+                        <input type="checkbox" name="hobby" id="" value="Membaca">Membaca <br>
+                        <input type="checkbox" name="hobby" id="" value="Menulis">Menulis <br>
+                        <input type="checkbox" name="hobby" id="" value="Olahraga">Olahraga <br>
+                        <input type="checkbox" name="hobby" id="" value="Makan">Makan <br>
+                        <input type="checkbox" name="hobby" id="" value="Tidur" checked>Tidur<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Pendidikan</label>
+                    </td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Pilih Pendidikan</option>
+                            <option value="SMA">SMA</option>
+                            <option value="D3">D3</option>
+                            <option value="S1">S1</option>
+                            <option value="S2">S2</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Alamat</label>
+                    </td>
+                    <td>
+                        <textarea name="" id="" cols="60" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Disabled</label>
+                    </td>
+                    <td>
+                        <input type="text" name="" id="" disabled>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
