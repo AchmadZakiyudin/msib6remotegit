@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Pegawai</title>
+</head>
+<body>
+    <h2 align="center">Data Pegawai PT. Freeport Indonesia</h2>
+    <table border="1" align="center" cellpadding="10" cellspacing="0" width="50%">
+        <thead bgcolor="lightblue">
+            <tr>
+                <th>Nama Pegawai</th>
+                <th>Jabatan</th>
+                <th>Status</th>
+                <th>Gaji Pokok</th>
+                <th>Tunjangan Jabatan</th>
+                <th>BPJS</th>
+                <th>Tunjangan Keluarga</th>
+                <th>Total Gaji</th>
+            </tr>
+        </thead>
+        <tbody id="pegawaiTableBody">
+            <!-- Data Pegawai akan ditambahkan disini menggunakan JavaScript -->
+        </tbody>
+        <tfoot align="center">
+            <tr>
+                <td colspan="7">Total Gaji</td>
+                <td id="totalGaji"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+<script>
+    // Fungsi untuk menambahkan data pegawai ke dalam tabel
+    function tambahDataPegawai(nama, jabatan, status) {
+        let gajiPokok = 0;
+            switch (jabatan) {
+        case "Manager": gajiPokok = 15000000;break;
+        case "Asisten Manager": gajiPokok = 10000000;break;
+        case "Staff": gajiPokok = 5000000;break;
+        default:
+        gajiPokok = 0;
+    }
+
+        let tunjanganJabatan = gajiPokok * 0.15;
+        let bpjs = gajiPokok * 0.1;
+        let tunjanganKeluarga = (status === "menikah") ? gajiPokok * 0.2 : 0;
+        let totalGaji = gajiPokok + tunjanganJabatan + bpjs + tunjanganKeluarga;
+
+        let tableBody = document.getElementById("pegawaiTableBody");
+        let newRow = tableBody.insertRow();
+
+        let cellNama = newRow.insertCell(0);
+        let cellJabatan = newRow.insertCell(1);
+        let cellStatus = newRow.insertCell(2);
+        let cellGajiPokok = newRow.insertCell(3);
+        let cellTunjanganJabatan = newRow.insertCell(4);
+        let cellBPJS = newRow.insertCell(5);
+        let cellTunjanganKeluarga = newRow.insertCell(6);
+        let cellTotalGaji = newRow.insertCell(7);
+
+        cellNama.innerHTML = nama;
+        cellJabatan.innerHTML = jabatan;
+        cellStatus.innerHTML = status;
+        cellGajiPokok.innerHTML = gajiPokok.toLocaleString('id-ID');
+        cellTunjanganJabatan.innerHTML = tunjanganJabatan.toLocaleString('id-ID');
+        cellBPJS.innerHTML = bpjs.toLocaleString('id-ID');
+        cellTunjanganKeluarga.innerHTML = tunjanganKeluarga.toLocaleString('id-ID');
+        cellTotalGaji.innerHTML = totalGaji.toLocaleString('id-ID');
+    }
+
+    // Panggil fungsi tambahDataPegawai untuk menambahkan data pegawai
+    tambahDataPegawai("Ridwan", "Manager", "menikah");
+
+    // Hitung total gaji
+    let totalGaji = 0;
+    let tabel = document.getElementById("pegawaiTableBody");
+    for (let i = 0; i < tabel.rows.length; i++) {
+        totalGaji += parseInt(tabel.rows[i].cells[7].innerHTML.replaceAll('.', ''));
+    }
+    document.getElementById("totalGaji").innerHTML = totalGaji.toLocaleString('id-ID');
+</script>
+
+</body>
+</html>
